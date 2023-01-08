@@ -20,3 +20,14 @@
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
+const btnColor = document.querySelector(".change-color");
+const textColor = document.querySelector(".color");
+const bodyColor = document.querySelector("body");
+
+btnColor.addEventListener('click', ChangeColor);
+
+function ChangeColor() {
+  bodyColor.style.backgroundColor = getRandomHexColor();
+  textColor.textContent = getRandomHexColor();
+}
