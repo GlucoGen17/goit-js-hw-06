@@ -23,3 +23,16 @@
 //   border-color: #f44336;
 // }
 
+const input = document.querySelector('#validation-input');
+
+input.addEventListener('blur', onBlur);
+
+function onBlur(event) {
+    if (event.currentTarget.value.length === Number(input.getAttribute('data-length'))) {
+        input.classList.remove("invalid");
+        input.classList.add("valid");
+    } else {
+        input.classList.remove("valid");
+        input.classList.add("invalid"); 
+    }
+}

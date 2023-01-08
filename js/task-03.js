@@ -25,10 +25,10 @@ const images = [
 const galleryList = document.querySelector(".gallery");
 
 const elementList = images
-  .map(function ({ url, alt }) {
+  .map(({ url, alt }) => {
     return `<li><img src = '${url}' alt = '${alt}' width="320"></li>`;
   })
-  .join("");
+  .join(" ");
 
 
 galleryList.insertAdjacentHTML("afterbegin", elementList);
@@ -39,5 +39,5 @@ display: flex;
 align-items: center;
 justify-content: center;
 list-style-type: none;
-gap: 20px
+gap: 15px
 `;
