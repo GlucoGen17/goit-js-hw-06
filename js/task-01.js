@@ -15,3 +15,14 @@
 // Category: Technologies
 // Elements: 5
 
+const totalItems = document.querySelectorAll('.item')
+
+// const totalNumberItemID = document.querySelector('.#categories')
+
+console.log(`Number of categories: ${totalItems.length}`)
+// console.log(`Number of categories: ${totalNumberItemID.children.length}`)
+
+totalItems.forEach(item => {
+    console.log(`Category: ${item.firstElementChild.textContent}`)
+    console.log(`Elements: ${item.lastElementChild.children.length}`)
+})
